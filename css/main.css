@@ -1,0 +1,456 @@
+/* google fonts 
+ada 2 kombinasi dari font-family serif dengan sans serif:
+Font ubuntu -> heading & logo
+font lora -> text
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'lora', serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Ubuntu:wght@500&display=swap');
+
+/* all content */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* body background berwarna abu-abu */
+body {
+    background-color: #f3efef;
+    /* min-height: 1000px; */
+}
+
+/* section .banner-wrapper------------------------------------------ */
+
+/* mengatur paragraf banner  */
+p {
+    font-weight: 300;
+    color: #111;
+}
+
+/* mengatur bannernya */
+.banner-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../assets/img/Background/bg.jpg);
+    background-size: cover;
+}
+
+/* mengatur content-wrapper didalam content banner */
+.banner-wrapper .content-banner {
+    max-width: 900px;
+    text-align: center;
+}
+
+/* mengatur heading 2 di dalam content banner */
+.banner-wrapper .content-banner h2 {
+    font-family: 'ubuntu', sans-serif;
+    font-size: 5em;
+    color: #ffffff;
+}
+
+/* mengatur p di dalam content banner */
+.banner-wrapper .content-banner p {
+    font-family: 'lora', serif;
+    font-size: 1em;
+    color: #ffffff;
+}
+
+/* mengatur btn banner-wrapper */
+.btn {
+    font-family: 'ubuntu', sans-serif;
+    font-size: 1em;
+    color: #ffffff;
+    background: #3F9121;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    box-shadow: 0 3px rgba(44, 44, 44, 0.6);
+    border-radius: 5px;
+}
+
+/* btn jika di hover */
+.btn:hover {
+    letter-spacing: 6px;
+    cursor: pointer;
+}
+
+/* btn jika di tekan akan seperti di klik */
+.btn:active {
+    position: relative;
+    top: 7px;
+    box-shadow: none;
+}
+
+/* mengatur element header */
+header {
+    position: fixed;
+    background-color: rgba(148, 135, 135, 35%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 100px;
+    z-index: 10000;
+    /* z-index 10000 supaya posisinya selalu di depan*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+/* mengatur logo di dalam header */
+header .logo {
+    font-family: 'ubuntu', sans-serif;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+/* element span untuk tanda titiknya
+header .logo span {
+    color: #3F9121;
+} */
+header img {
+    width: 100px;
+    height: 50px;
+    padding-top: 7px;
+}
+
+/* bagian nav */
+header .nav {
+    position: relative;
+    display: flex;
+    font-family: 'lora', serif;
+}
+
+/* menghilangkan unordered list circle*/
+header .nav li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+header .nav li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+/* section .banner-wrapper end------------------------------------------ */
+
+
+
+/* section about ---------------------------------------------------- */
+
+/* ini juga berlaku untuk semua section */
+section {
+    padding: 100px;
+}
+
+/* mengatur semua baris */
+.row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* mengatur 2 kolom yang kelasnya col50 */
+.row .col50 {
+    position: relative;
+    width: 48%;
+}
+
+/* mengatur judul text about di dalam div row */
+.row .titletext {
+    color: #111;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+/* mengatur color span di dalan class titletext */
+.titletext span {
+    color: #3F9121;
+    font-weight: 700;
+    font-size: 1.5em;
+    font-family: 'ubuntu', sans-serif;
+}
+
+.row .col50 .imgbox {
+    position: relative;
+    width: 100%;
+    /* height: 100%; */
+    min-height: 300px;
+}
+
+.row .col50 .imgbox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.row p {
+    text-align: justify;
+}
+
+/* section about end ---------------------------------------------------- */
+
+
+/* section menu ----------------------------------------------------- */
+/* untuk  mengatur div dengan kelas title pada bagian section menu */
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* mengatur font-family lora untuk text */
+.menu .title p {
+    font-family: 'lora', serif;
+}
+
+/* mengatur bagian keseluruhan konten dari 6 box */
+.menu .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 40px;
+}
+
+/* ini mengatur untuk masing-masing box */
+.menu .content .box {
+    width: 330px;
+    margin: 20px;
+    border: 15px solid #fff;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+}
+
+/* ini mengatur untuk masing-masing pada box induk */
+.menu .content .box .imgbx {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+/* mengatur masing- masing img pada box */
+.menu .content .box .imgbx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* mengatur padding text didalam masing-masing box */
+.menu .content .box .text {
+    padding: 15px 0 5px;
+}
+
+/* mengatur text didalam masing-masing box */
+.menu .content .box .text h3 {
+    font-weight: 400;
+    color: #111;
+    font-family: 'lora', serif;
+}
+
+/* section menu end----------------------------------------------------- */
+
+
+/* section testimonials ---------------------------------------------- */
+/* memasang background pada section testimonials */
+.testimonials {
+    background: url(../assets/img/Background/bg2.jpg);
+    background-size: cover;
+}
+
+/* mengatur judul text pada section testimonials */
+.white .titletext,
+.white p {
+    color: #fff;
+}
+
+/* mengatur content dari testimonials */
+.testimonials .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+/* mengatur box nya bg putih */
+.testimonials .content .box {
+    width: 340px;
+    margin: 20px;
+    padding: 40px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 10px 10px 40px;
+}
+
+/* ini adalah img box nya  */
+.testimonials .content .box .imgbx {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* ini mengatur img nya */
+.testimonials .content .box .imgbx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonials .content .box .text {
+    text-align: center;
+}
+
+.testimonials .content .box .text p {
+    color: #666;
+    font-style: italic;
+}
+
+.testimonials .content .box .text h3 {
+    margin-top: 20px;
+    color: #3F9121;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+/* section testimonials emd ---------------------------------------------- */
+
+
+/* section contact  ----------------------------------------------------*/
+
+
+/* mengatur bacground section contact */
+.contact {
+    background: url(../assets/img/Background/bg3.jpg);
+    background-size: cover;
+}
+
+/* mengatur posisi dari contact form */
+.contactForm {
+    padding: 75px 50px;
+    background: #fff;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin-top: 50px;
+}
+
+/* mengatur judul send message di contact box */
+.contactForm h3 {
+    color: #111;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* mengatur semua posisi input box */
+.contactForm .inputBox {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* untuk mengatur input dan textarea */
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+    width: 100%;
+    border: 1px solid #555;
+    padding: 10px;
+    color: #111;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    resize: none;
+}
+
+/* mengatur tombol bottom send submit */
+.contactForm .inputBox input[type="submit"] {
+    font-size: 1em;
+    color: #fff;
+    background: #3F9121;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    max-width: 100px;
+    transition: 0.5s;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 7px 20px rgba(130, 128, 128, 0.3);
+}
+
+.contactForm .inputBox input[type="submit"]:active {
+    position: relative;
+    top: 7px;
+    box-shadow: none;
+}
+
+.logo-footer img {
+    width: 100px;
+    height: 50px;
+}
+
+.logo-footer p {
+    color: #b3aeb5;
+    font-size: 12px;
+}
+
+.logo-footer img {
+    position: absolute;
+    margin-top: 25px;
+}
+
+.logo-footer p {
+    position: absolute;
+    margin-top: 70px;
+}
+
+/* section contact end ----------------------------------------------------*/
+
+
+
+/* section footer ------------------------------------------------------- */
+.copyRightText {
+    padding: 8px 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.copyRightText p {
+    color: #3F9121;
+    font-weight: 200;
+}
